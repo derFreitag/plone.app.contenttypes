@@ -38,7 +38,7 @@ class RichText(object):
 
     @property
     def text(self):
-        return self.context.text
+        return getattr(self.context, 'text', '')
 
     @text.setter
     def text(self, value):
